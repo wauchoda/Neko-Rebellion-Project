@@ -1,4 +1,4 @@
-﻿## This file contains some of the options that can be changed to customize
+## This file contains some of the options that can be changed to customize
 ## your Ren'Py game. It only contains the most common options... there
 ## is quite a bit more customization you can do.
 ##
@@ -17,17 +17,17 @@ init -1 python hide:
 
     ## These control the width and height of the screen.
 
-    config.screen_width = 800
-    config.screen_height = 600
+    config.screen_width = 1280
+    config.screen_height = 720
 
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
 
-    config.window_title = u"Neko Rebellion Project"
+    config.window_title = u"Neko-Rebellion-Project"
 
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
-    config.name = "Neko Rebellion Project"
+    config.name = "Neko-Rebellion-Project"
     config.version = "0.0"
 
     #########################################
@@ -39,44 +39,44 @@ init -1 python hide:
     ## The theme function takes a number of parameters that can
     ## customize the color scheme.
 
-    theme.bordered(
-        ## Theme: Bordered
-        ## Color scheme: Phone Operator
+    theme.regal(
+        ## Theme: Regal
+        ## Color scheme: Urban Sprawl
 
         ## The color of an idle widget face.
-        widget = "#59667a",
+        widget = "#333333",
 
         ## The color of a focused widget face.
-        widget_hover = "#343e4d",
+        widget_hover = "#000000",
 
         ## The color of the text in a widget.
-        widget_text = "#ffffff",
+        widget_text = "#6C8A2F",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
-        widget_selected = "#bed4f6",
+        widget_selected = "#ffffff",
 
         ## The color of a disabled widget face.
-        disabled = "#929292",
+        disabled = "#8F0000",
 
         ## The color of disabled widget text.
-        disabled_text = "#ababab",
+        disabled_text = "#333333",
 
         ## The color of informational labels.
-        label = "#343e4d",
+        label = "#ffffff",
 
         ## The color of a frame containing widgets.
-        frame = "#d2d2d2",
+        frame = "#8F0000",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#59667a",
+        mm_root = "menu.jpg",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        gm_root = "#59667a",
+        gm_root = "#000000",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
@@ -262,7 +262,7 @@ init -1 python hide:
     ## stored. (It needs to be set early, before any other init code
     ## is run, so the persistent information can be found by the init code.)
 python early:
-    config.save_directory = "Neko Rebellion Project-1456982030"
+    config.save_directory = "Neko-Rebellion-Project-1456984583"
 
 init -1 python hide:
     #########################################
