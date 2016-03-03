@@ -348,7 +348,7 @@ screen preferences():
     use navigation
 
     # Put the navigation columns in a three-wide grid.
-    grid 3 1:
+    grid 2 1:
         style_group "prefs"
         xfill True
 
@@ -382,7 +382,12 @@ screen preferences():
                 has vbox
 
                 textbutton _("Joystick...") action Preference("joystick")
+            frame:
+                style_group "pref"
+                has vbox
 
+                label _("Music Volume")
+                bar value Preference("music volume")
 
         vbox:
             frame:
@@ -416,15 +421,6 @@ screen preferences():
 
                 if config.has_voice:
                     textbutton _("Wait for Voice") action Preference("wait for voice", "toggle")
-
-        vbox:
-            frame:
-                style_group "pref"
-                has vbox
-
-                label _("Music Volume")
-                bar value Preference("music volume")
-
             frame:
                 style_group "pref"
                 has vbox
@@ -437,19 +433,23 @@ screen preferences():
                         action Play("sound", config.sample_sound)
                         style "soundtest_button"
 
-            if config.has_voice:
-                frame:
-                    style_group "pref"
-                    has vbox
+                if config.has_voice:
+                    frame:
+                        style_group "pref"
+                        has vbox
 
-                    label _("Voice Volume")
-                    bar value Preference("voice volume")
+                        label _("Voice Volume")
+                        bar value Preference("voice volume")
 
-                    textbutton _("Voice Sustain") action Preference("voice sustain", "toggle")
-                    if config.sample_voice:
-                        textbutton _("Test"):
-                            action Play("voice", config.sample_voice)
-                            style "soundtest_button"
+                        textbutton _("Voice Sustain") action Preference("voice sustain", "toggle")
+                        if config.sample_voice:
+                            textbutton _("Test"):
+                                action Play("voice", config.sample_voice)
+                                style "soundtest_button"
+       
+          
+
+          
 
 init -2:
     style pref_frame:
