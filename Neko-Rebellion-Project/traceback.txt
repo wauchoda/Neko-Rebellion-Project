@@ -1,0 +1,42 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While processing the background property of style mm_root:
+  File "renpy/common/00start.rpy", line 67, in _init_language
+    renpy.change_language(language)
+ValueError: invalid literal for int() with base 16: 'me'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\Owner\Desktop\New folder\renpy-6.99.8-sdk\renpy\bootstrap.py", line 281, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Owner\Desktop\New folder\renpy-6.99.8-sdk\renpy\main.py", line 468, in main
+    run(restart)
+  File "C:\Users\Owner\Desktop\New folder\renpy-6.99.8-sdk\renpy\main.py", line 64, in run
+    renpy.translation.init_translation()
+  File "C:\Users\Owner\Desktop\New folder\renpy-6.99.8-sdk\renpy\translation.py", line 472, in init_translation
+    renpy.store._init_language() # @UndefinedVariable
+  File "renpy/common/00start.rpy", line 67, in _init_language
+    renpy.change_language(language)
+  File "C:\Users\Owner\Desktop\New folder\renpy-6.99.8-sdk\renpy\translation.py", line 491, in change_language
+    renpy.style.rebuild() # @UndefinedVariable
+  File "renpy/style.pyx", line 779, in renpy.style.rebuild (gen\renpy.style.c:11521)
+    build_styles()
+  File "renpy/style.pyx", line 772, in renpy.style.build_styles (gen\renpy.style.c:11380)
+    build_style(s)
+  File "renpy/style.pyx", line 689, in renpy.style.build_style (gen\renpy.style.c:10161)
+    raise
+  File "renpy/style.pyx", line 686, in renpy.style.build_style (gen\renpy.style.c:10051)
+    pfw.function(s.cache, cache_priorities, priority, v)
+  File "style_functions.pyx", line 216, in style_functions.background_property (gen\renpy.styledata.style_functions.c:3004)
+  File "C:\Users\Owner\Desktop\New folder\renpy-6.99.8-sdk\renpy\easy.py", line 45, in displayable_or_none
+    return renpy.store.Solid(d)
+  File "C:\Users\Owner\Desktop\New folder\renpy-6.99.8-sdk\renpy\display\imagelike.py", line 45, in __init__
+    self.color = renpy.easy.color(color)
+  File "C:\Users\Owner\Desktop\New folder\renpy-6.99.8-sdk\renpy\color.py", line 136, in __new__
+    r = int(c[0]+c[1], 16)
+ValueError: invalid literal for int() with base 16: 'me'
+
+Windows-8-6.2.9200
+Ren'Py 6.99.8.959
+Neko-Rebellion-Project 0.0
