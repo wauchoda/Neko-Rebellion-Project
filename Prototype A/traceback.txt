@@ -1,26 +1,72 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 20, in script
-    scene underpass day with dissolve(30)
-TypeError: 'Dissolve' object is not callable
+Executing ATL code at game/script.rpy:25
+  File "game/script.rpy", line 41, in script
+    e "You've created a new Ren'Py game."
+Exception: ATL appears to be in an infinite loop.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 20, in script
-    scene underpass day with dissolve(30)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\ast.py", line 1265, in execute
-    renpy.exports.with_statement(trans, paired)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\exports.py", line 1356, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\core.py", line 1989, in do_with
-    clear=clear)
+  File "game/script.rpy", line 41, in script
+    e "You've created a new Ren'Py game."
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\ast.py", line 603, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\exports.py", line 1121, in say
+    who(what, interact=interact)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\character.py", line 828, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\character.py", line 690, in do_display
+    **display_args)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\character.py", line 493, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\ui.py", line 277, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\core.py", line 2424, in interact
     repeat, rv = self.interact_core(preloads=preloads, **kwargs)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\core.py", line 2638, in interact_core
-    new_widget=layers_root)
-TypeError: 'Dissolve' object is not callable
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\core.py", line 2765, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\core.py", line 1849, in draw_screen
+    renpy.config.screen_height,
+  File "renpy/display/render.pyx", line 394, in renpy.display.render.render_screen (gen\renpy.display.render.c:6190)
+    rv = render(root, width, height, 0, 0)
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\layout.py", line 650, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen\renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\layout.py", line 650, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen\renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\layout.py", line 650, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen\renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\image.py", line 261, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\image.py", line 124, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen\renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "renpy/display/accelerator.pyx", line 91, in renpy.display.accelerator.transform_render (gen\renpy.display.accelerator.c:1752)
+    self.update_state()
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\motion.py", line 779, in update_state
+    fr = self.function(self, self.st, self.at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\atl.py", line 502, in execute
+    action, arg, pause = block.execute(trans, timebase, self.atl_state, event)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\atl.py", line 718, in execute
+    raise Exception("ATL appears to be in an infinite loop.")
+Exception: ATL appears to be in an infinite loop.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.8.959
