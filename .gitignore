@@ -1,6 +1,8 @@
 # Renpy backup files .bak
 .bak
-
+log.txt
+errors.txt
+traceback.txt
 
 # Windows image file caches
 Thumbs.db

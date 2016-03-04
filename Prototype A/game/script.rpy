@@ -32,7 +32,7 @@ label start:
     scene underpass_day
     
     
-    show bg underpass daytoafternoon
+    show bg underpass daytoafternoon onlayer screen
     #order matters, if you call bg underpass after eileen it will display over her
     show eileen happy
     e "5 Second transition to afternoon afternoon."
