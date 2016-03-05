@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Executing ATL code at game/script.rpy:25
-  File "game/script.rpy", line 41, in script
-    e "You've created a new Ren'Py game."
-Exception: ATL appears to be in an infinite loop.
+While loading <'Image' 'frame.png'>:
+  File "game/script.rpy", line 38, in script
+    e "5 Second transition to afternoon afternoon."
+error: Unsupported image format
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 41, in script
-    e "You've created a new Ren'Py game."
+  File "game/script.rpy", line 38, in script
+    e "5 Second transition to afternoon afternoon."
   File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\ast.py", line 603, in execute
     renpy.exports.say(who, what, interact=self.interact)
   File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\exports.py", line 1121, in say
@@ -50,23 +50,40 @@ Full traceback:
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
     rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\image.py", line 261, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\image.py", line 124, in wrap_render
-    rend = render(child, w, h, st, at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\screen.py", line 610, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
   File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen\renpy.display.render.c:3104)
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
     rv = d.render(widtho, heighto, st, at)
-  File "renpy/display/accelerator.pyx", line 91, in renpy.display.accelerator.transform_render (gen\renpy.display.accelerator.c:1752)
-    self.update_state()
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\motion.py", line 779, in update_state
-    fr = self.function(self, self.st, self.at)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\atl.py", line 502, in execute
-    action, arg, pause = block.execute(trans, timebase, self.atl_state, event)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\atl.py", line 718, in execute
-    raise Exception("ATL appears to be in an infinite loop.")
-Exception: ATL appears to be in an infinite loop.
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\layout.py", line 650, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen\renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\layout.py", line 1044, in render
+    back = render(style.background, bw, bh, st, at)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen\renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\imagelike.py", line 186, in render
+    crend = render(image, width, height, st, at)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen\renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\im.py", line 478, in render
+    im = cache.get(self)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\im.py", line 200, in get
+    surf = image.load()
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\im.py", line 529, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\pgrender.py", line 142, in load_image
+    surf = pygame.image.load(f, renpy.exports.fsencode(filename))
+  File "pygame_sdl2/image.pyx", line 86, in pygame_sdl2.image.load (gen\pygame_sdl2.image.c:1574)
+error: Unsupported image format
 
 Windows-8-6.2.9200
 Ren'Py 6.99.8.959
