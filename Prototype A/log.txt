@@ -1,20 +1,20 @@
-Sat Mar 05 00:32:44 2016
+Sun Mar 27 20:36:02 2016
 Windows-8-6.2.9200
 Ren'Py 6.99.8.959
  
 
 Bootstrap to the start of init.init took 0.07s
 Early init took 0.01s
-Loader init took 0.02s
+Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.05s
+Loading script took 0.06s
 Loading persistent took 0.01s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.07s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Dump and make backups. took 0.03s
+Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 DPI scale factor: 1.250000
@@ -34,7 +34,7 @@ Interface start took 0.00s
 
 primary display bounds: (0, 0, 1537, 865)
 Windowed mode.
-Screen sizes: virtual=(1280, 720) physical=(1682, 946) drawable=(1682, 946)
+Screen sizes: virtual=(1280, 720) physical=(1695, 953) drawable=(1695, 953)
 Vendor: 'Intel'
 Renderer: 'Intel(R) HD Graphics 4600'
 Version: '4.3.0 - Build 10.18.15.4279'
@@ -251,30 +251,13 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 0.891000032425s
+Total time until interface ready: 0.807999849319s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.043000 seconds.
-- Frame drawn at 0.091000 seconds.
-- Frame drawn at 0.101000 seconds.
-- Frame drawn at 0.133000 seconds.
-- 0.133000 seconds to render 5 frames.
+- Frame drawn at 0.019000 seconds.
+- Frame drawn at 0.040000 seconds.
+- Frame drawn at 0.049000 seconds.
+- Frame drawn at 0.067000 seconds.
+- 0.067000 seconds to render 5 frames.
 
-primary display bounds: (0, 0, 1537, 865)
-Windowed mode.
-Screen sizes: virtual=(1280, 720) physical=(1842, 1051) drawable=(1842, 1051)
-Cleaning stores took 0.00s
-Init translation took 0.08s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-The window was minimized.
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Runn
+primary display bounds: (0

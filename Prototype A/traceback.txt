@@ -1,9 +1,9 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' 'frame.png'>:
+While running game code:
   File "game/script.rpy", line 38, in script
     e "5 Second transition to afternoon afternoon."
-error: Unsupported image format
+Exception: Could not find font '_font/Nobile-Regular.ttf'.
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -62,28 +62,31 @@ Full traceback:
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
     rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\layout.py", line 1044, in render
-    back = render(style.background, bw, bh, st, at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\layout.py", line 796, in render
+    surf = render(d, rw, height - y, cst, cat)
   File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen\renpy.display.render.c:3104)
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
     rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\imagelike.py", line 186, in render
-    crend = render(image, width, height, st, at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\behavior.py", line 645, in render
+    rv = super(Button, self).render(width, height, st, at)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\layout.py", line 1024, in render
+    st, at)
   File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen\renpy.display.render.c:3104)
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen\renpy.display.render.c:2721)
     rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\im.py", line 478, in render
-    im = cache.get(self)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\im.py", line 200, in get
-    surf = image.load()
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\im.py", line 529, in load
-    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
-  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\display\pgrender.py", line 142, in load_image
-    surf = pygame.image.load(f, renpy.exports.fsencode(filename))
-  File "pygame_sdl2/image.pyx", line 86, in pygame_sdl2.image.load (gen\pygame_sdl2.image.c:1574)
-error: Unsupported image format
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\text\text.py", line 1673, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\text\text.py", line 567, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\text\text.py", line 239, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\text\font.py", line 646, in get_font
+    face = load_face(fn)
+  File "C:\Users\David\Downloads\Software Work\Renpy\renpy-6.99.8-sdk\renpy\text\font.py", line 589, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font '_font/Nobile-Regular.ttf'.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.8.959

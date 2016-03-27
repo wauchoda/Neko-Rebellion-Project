@@ -137,11 +137,20 @@ init -1 python hide:
 
     ## The file containing the default font.
 
-    # style.default.font = "DejaVuSans.ttf"
+    style.default.font = "font/Nobile-Regular.ttf"
 
     ## The default size of text.
+    
+    
+    #style.default.bold_font = "_font/Nobile-Regular.ttf"
+    
+    #style.default.color = "#ffffff" #Makes text black
 
-    # style.default.size = 22
+    style.default.drop_shadow = [(1, 1)] #Adds a shadow one pixel to the right and one pixel down
+
+    #style.default.outlines = [(2, "#ffffff", 0, 0), (1, "#000000", 0, 0)] #Adds a white outline 4 pixels thick, and then a black outline, 2 pixels thick
+    
+    
 
     ## Note that these only change the size of some of the text. Other
     ## buttons have their own styles.
