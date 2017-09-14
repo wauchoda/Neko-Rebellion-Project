@@ -134,10 +134,10 @@ init -1 python hide:
     ## the number is interpreted as a fraction of the size of the
     ## displayable or screen.
 
-    # style.mm_menu_frame.xpos = 0.5
-    # style.mm_menu_frame.xanchor = 0.5
-    # style.mm_menu_frame.ypos = 0.75
-    # style.mm_menu_frame.yanchor = 0.5
+    style.mm_menu_frame.xpos = 0.5
+    style.mm_menu_frame.xanchor = 0.5
+    style.mm_menu_frame.ypos = 0.75
+    style.mm_menu_frame.yanchor = .7
 
 
     #########################################
@@ -145,11 +145,11 @@ init -1 python hide:
 
     ## The file containing the default font.
 
-    # style.default.font = "DejaVuSans.ttf"
+    style.default.font = "DejaVuSans.ttf"
 
     ## The default size of text.
 
-    # style.default.size = 22
+    style.default.size = 22
 
     ## Note that these only change the size of some of the text. Other
     ## buttons have their own styles.
@@ -183,7 +183,7 @@ init -1 python hide:
 
     ## A sample sound that can be played to check the sound volume.
 
-    # config.sample_sound = "click.wav"
+    config.sample_sound = "click.wav"
 
     ## Music that is played while the user is at the main menu.
 
